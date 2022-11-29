@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Ubuntu", "Source Sans Pro", sans-serif;
+  background: #02a75a;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.conteiner {
+  position: absolute;
+  width: 80vmin;
+  min-width: 300px;
+  padding: 3em 4em;
+
+  background-color: #fff;
+  border-radius: 1.5em;
+}
+h1 {
+  display: block;
+  margin-bottom: 1.5em;
+
+  text-align: center;
+  font-size: 2em;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  color: #02a75a;
+}
+.allInput {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2em;
+}
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+}
+.input label {
+  display: block;
+  font-size: 1.3em;
+  font-weight: 500;
+  color: #002d00;
+}
+.input input {
+  width: 100%;
+  padding: 0.5em;
+
+  font-size: 1.1em;
+  border-radius: 0.2em;
+  border: 1.5px solid #002d00;
+  color: #002d00;
+  outline-color: none;
+}
+.msg-error {
+  display: none;
+  margin-top: 1.2em;
+  text-align: center;
+
+  font-size: 1.1em;
+  color: #ff4362;
+}
+.error {
+  display: block;
+  position: relative;
+  animation: error 150ms;
+}
+
+@keyframes error {
+  from {
+    left: 0;
+  }
+  25% {
+    left: 10px;
+  }
+  50% {
+    left: -10px;
+  }
+  75% {
+    left: 10px;
+  }
+  to {
+    left: 0;
+  }
+}
+@media screen and (max-width: 550px) {
+  .conteiner {
+    padding: 2em 2.5em 3em;
+  }
+  h1 {
+    line-height: 1.2em;
+    font-size: 1.8em;
+    word-spacing: 8em;
+    margin-bottom: 1em;
+  }
+  .allInput {
+    flex-direction: column;
+  }
+  .input label {
+    font-size: 1.2em;
+  }
+}
